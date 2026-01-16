@@ -1,0 +1,85 @@
+row=3              #create a matrix
+col=3
+matrix=[]
+for i in range(row):
+    row=[]
+    for j in range(col):
+        row.append(int(input("enter value: ")))
+    matrix.append(row)
+print(matrix) 
+
+
+m1=[[1,2,3],[4,5,6],[7,8,9]]       #add two matrix
+m2=[[1,2,1],[1,4,4],[1,0,0]]
+if len(m1) ==0 and len(m2)==0:
+    print([])
+else:
+    if len(m1)==len(m2) and len(m1[0])== len(m2[0]):
+        for row in range(len(m1)):
+            for col in range(len(m1[0])):
+                m1[row][col] = m1[row][col] + m2[row][col] 
+        print(m1)
+    else:
+        print('not') 
+
+
+m1=[[1,2,3],[4,5,6],[7,8,9]]       #diagonal of matrix
+sum=0
+for row in range(len(m1)):
+    for col in range(len(m1[0])):
+        if row==col:
+            sum+= m1[row][col] 
+print(sum)
+
+
+m1=[[1,2,3],[4,5,6],[7,8,9]] 
+sum=0
+for i in range(len(m1)):
+    sum+= m1[i][i]
+print(sum)  
+
+m1=[[1,2,3],[4,5,6],[7,8,9]]        #multiply of matrix
+m2=[[1,4,4],[1,2,1],[0,3,6]]
+res=[]
+if len(m1)==0 and len(m2)==0:
+    print(res)
+else:
+    if len(m1[0])==len(m2[0]):
+        for ind1 in range(len(m1)):
+            row=[]
+            for ind2 in range(len(m2[0])):
+                ele=0
+                for ind3 in range(len(m2)):
+                    ele+= m1[ind1][ind3] * m2[ind3][ind2]
+                row.append(ele)
+            res.append(row)
+        print(res)             
+    else:
+        print('not possible') 
+
+m1=[[1,2,3],[4,5,6],[7,8,9]]       #rotate 90^
+res=[]
+for ind1 in range(len(m1)):
+    row=[]
+    for ind2 in range(len(m1[0])-1,-1,-1):
+        row.append(m1[ind2][ind1])
+    res.append(row)
+print(res)
+
+m1=[[1,2,3],[4,5,6],[7,8,9]]          #180^
+res=[]
+for ind1 in range(len(m1)-1,-1,-1):
+    row=[]
+    for ind2 in range(len(m1[0])-1,-1,-1):
+        row.append(m1[ind1][ind2])
+    res.append(row)
+print(res)
+
+m1=[[1,2,3],[4,5,6],[7,8,9]]         #270^
+res=[]
+for ind1 in range(len(m1)-1,-1,-1):
+    row=[]
+    for ind2 in range(len(m1[0])):
+        row.append(m1[ind2][ind1])
+    res.append(row)
+print(res)
