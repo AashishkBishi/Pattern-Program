@@ -9,7 +9,7 @@ for i in range(row):
 print(matrix) 
 
 
-m1=[[1,2,3],[4,5,6],[7,8,9]]       #add two matrix
+m1=[[1,2,3],[4,5,6],[7,8,9]]       #addition of Two matrix
 m2=[[1,2,1],[1,4,4],[1,0,0]]
 if len(m1) ==0 and len(m2)==0:
     print([])
@@ -32,14 +32,14 @@ for row in range(len(m1)):
 print(sum)
 
 
-m1=[[1,2,3],[4,5,6],[7,8,9]]      #Optimized solution of diagonal-sum matrix 
+m1=[[1,2,3],[4,5,6],[7,8,9]]      #Optimized solution of diagonal-Sum matrix 
 sum=0
 for i in range(len(m1)):
     sum+= m1[i][i]
 print(sum)  
 
 
-m1=[[1,2,3],[4,5,6],[7,8,9]]        #multiply of matrix
+m1=[[1,2,3],[4,5,6],[7,8,9]]        #multiply of Two matrix
 m2=[[1,4,4],[1,2,1],[0,3,6]]
 res=[]
 if len(m1)==0 and len(m2)==0:
