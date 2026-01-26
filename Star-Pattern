@@ -88,6 +88,15 @@ for row in range(1,num+1):
     else:
         space+=1
         star-=2 
+        
+num = 5          #optimized of Diamond star pattern
+mid = num//2
+for row in range(num):
+    spaces = abs(mid - row)
+    stars = num - 2 * spaces
+    print("  " * spaces + "* " * stars)
+
+
 
 
 
