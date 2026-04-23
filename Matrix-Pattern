@@ -87,3 +87,14 @@ for ind1 in range(len(m1)-1,-1,-1):
         row.append(m1[ind2][ind1])
     res.append(row)
 print(res)
+
+
+m1=[[1,2,3],[4,5,6],[9,8,9]]    #Both-diagonal Sum Matrix
+primary=0
+secondary=0
+n= len(m1)
+for i in range(len(m1)):
+    primary+= m1[i][i]
+    secondary+= m1[i][n-i-1]
+sum = primary + secondary    
+print(sum)
